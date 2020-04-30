@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<robot name="hdt_arm"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+  <link name="base_link">
+  </link>
+  <link name="pedestal_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file:///tmp/pedestal_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file:///tmp/pedestal_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  <link name="drive1_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive1_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive1_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  <link name="drive2_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="-3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive2_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive2_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  <link name="humerus_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file:///tmp/humerus_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="file:///tmp/humerus_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  <link name="elbow_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 -2.06823e-13 3.14159"/>
+      <geometry>
+        <mesh filename="file:///tmp/elbow_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 -2.06823e-13 3.14159"/>
+      <geometry>
+        <mesh filename="file:///tmp/elbow_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  <link name="drive3_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 1.5708 -1.5708"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive3_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 1.5708 -1.5708"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive3_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.005" ixy="2.77556e-19" ixz="-2.77556e-19" iyy="0.005" iyz="-2.77556e-19" izz="0.005"/>
+    </inertial>
+  </link>
+  <link name="drive4_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="-3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive4_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive4_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  <link name="wrist_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="file:///tmp/wrist_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="file:///tmp/wrist_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  <link name="drive5_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 1.5708 3.14159"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive5_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 1.5708 3.14159"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive5_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  <link name="drive6_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 1.5708 -1.5708"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive6_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 1.5708 -1.5708"/>
+      <geometry>
+        <mesh filename="file:///tmp/drive6_link_mesh.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.005" iyz="0" izz="0.005"/>
+    </inertial>
+  </link>
+  <link name="endpoint_link">
+  </link>
+  <joint name="pedestal_joint" type="fixed">
+    <parent link="base_link"/>
+    <child  link="pedestal_link"/>
+    <origin xyz="0 0 0" rpy="0 -0 0 "/>
+    <axis   xyz="0 0 0"/>
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <joint name="drive1_joint" type="revolute">
+    <parent link="pedestal_link"/>
+    <child  link="drive1_link"/>
+    <origin xyz="0 0 0.08335" rpy="0 0 -1.5708 "/>
+    <axis   xyz="0 0 1"/>
+    <limit lower="-6.28319" upper="6.28319" effort="60" velocity="0.785398" />
+    <dynamics damping="0.7" friction="0" />
+  </joint>
+  <joint name="drive2_joint" type="revolute">
+    <parent link="drive1_link"/>
+    <child  link="drive2_link"/>
+    <origin xyz="0.07155 0 0" rpy="0 -1.5708 0 "/>
+    <axis   xyz="0 0 1"/>
+    <limit lower="-1.5708" upper="1.5708" effort="60" velocity="0.785398" />
+    <dynamics damping="0.7" friction="0" />
+  </joint>
+  <joint name="humerus_joint" type="fixed">
+    <parent link="drive2_link"/>
+    <child  link="humerus_link"/>
+    <origin xyz="0.17855 0 0" rpy="0 -0 0 "/>
+    <axis   xyz="0 0 0"/>
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <joint name="elbow_joint" type="fixed">
+    <parent link="humerus_link"/>
+    <child  link="elbow_link"/>
+    <origin xyz="0.17855 0 0" rpy="0 -0 0 "/>
+    <axis   xyz="0 0 0"/>
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <joint name="drive3_joint" type="revolute">
+    <parent link="elbow_link"/>
+    <child  link="drive3_link"/>
+    <origin xyz="0 0 0.07155" rpy="0 -0 0 "/>
+    <axis   xyz="0 0 1"/>
+    <limit lower="-4.49" upper="1.35" effort="60" velocity="0.785398" />
+    <dynamics damping="0.7" friction="0" />
+  </joint>
+  <joint name="drive4_joint" type="revolute">
+    <parent link="drive3_link"/>
+    <child  link="drive4_link"/>
+    <origin xyz="0 0.142 0" rpy="-1.5708 0 0 "/>
+    <axis   xyz="0 0 1"/>
+    <limit lower="-6.28319" upper="6.28319" effort="60" velocity="0.785398" />
+    <dynamics damping="0.7" friction="0" />
+  </joint>
+  <joint name="wrist_joint" type="fixed">
+    <parent link="drive4_link"/>
+    <child  link="wrist_link"/>
+    <origin xyz="0 0 0.12955" rpy="0 -1.5708 4.71239 "/>
+    <axis   xyz="0 0 0"/>
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <joint name="drive5_joint" type="revolute">
+    <parent link="wrist_link"/>
+    <child  link="drive5_link"/>
+    <origin xyz="0 0 -0.07155" rpy="-3.14159 -0 0 "/>
+    <axis   xyz="0 0 1"/>
+    <limit lower="-6.28319" upper="6.28319" effort="60" velocity="0.785398" />
+    <dynamics damping="0.7" friction="0" />
+  </joint>
+  <joint name="drive6_joint" type="revolute">
+    <parent link="drive5_link"/>
+    <child  link="drive6_link"/>
+    <origin xyz="0.0885 0 0" rpy="0 1.5708 -0 "/>
+    <axis   xyz="0 0 1"/>
+    <limit lower="-6.28319" upper="6.28319" effort="60" velocity="0.785398" />
+    <dynamics damping="0.7" friction="0" />
+  </joint>
+  <joint name="endpoint_joint" type="fixed">
+    <parent link="drive6_link"/>
+    <child  link="endpoint_link"/>
+    <origin xyz="0 0 0.1" rpy="0 -1.5708 1.5708 "/>
+    <axis   xyz="0 0 0"/>
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+</robot>

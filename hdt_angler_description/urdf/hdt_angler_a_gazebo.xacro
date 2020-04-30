@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/hdt_arm</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+<!-- 
+  <gazebo reference="pedestal_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="drive1_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="drive2_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="humerus_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="elbow_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="drive3_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="drive4_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="wrist_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="drive5_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="drive6_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="pincer_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+  
+  <gazebo reference="pincer_link2">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo>
+
+  <gazebo reference="endpoint_link">
+    <material>Gazebo/Black</material>
+    <mu1>0.61</mu1>
+    <mu2>0.61</mu2>
+  </gazebo> -->
+
+  <!-- camera -->
+  <!-- <gazebo reference="camera_link">
+    <sensor name="kinect_camera" type="depth">
+      <update_rate>20</update_rate>
+      <camera>
+        <horizontal_fov>1.047198</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>3</far>
+        </clip>
+      </camera>
+      <plugin name="kinect_controller" filename="libgazebo_ros_openni_kinect.so">
+        <baseline>0.2</baseline>
+        <alwaysOn>true</alwaysOn>
+        <updateRate>1.0</updateRate>
+        <cameraName>kinect_ir</cameraName>
+        <imageTopicName>/kinect/color/image_raw</imageTopicName>
+        <cameraInfoTopicName>/kinect/color/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>/kinect/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>/kinect/depth/camera_info</depthImageInfoTopicName>
+        <pointCloudTopicName>/kinect/depth/points</pointCloudTopicName>
+        <frameName>camera_link_optical</frameName>
+        <pointCloudCutoff>0.5</pointCloudCutoff>
+        <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+        <distortionK1>0.00000001</distortionK1>
+        <distortionK2>0.00000001</distortionK2>
+        <distortionK3>0.00000001</distortionK3>
+        <distortionT1>0.00000001</distortionT1>
+        <distortionT2>0.00000001</distortionT2>
+        <CxPrime>0</CxPrime>
+        <Cx>0</Cx>
+        <Cy>0</Cy>
+        <focalLength>0</focalLength>
+        <hackBaseline>0</hackBaseline>
+      </plugin>
+    </sensor>
+  </gazebo> -->
+
+</robot>

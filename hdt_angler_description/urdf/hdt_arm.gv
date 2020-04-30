@@ -1,0 +1,50 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"base_link" [label="base_link"];
+"pedestal_link" [label="pedestal_link"];
+"drive1_link" [label="drive1_link"];
+"drive2_link" [label="drive2_link"];
+"humerus_link" [label="humerus_link"];
+"elbow_link" [label="elbow_link"];
+"drive3_link" [label="drive3_link"];
+"drive4_link" [label="drive4_link"];
+"wrist_link" [label="wrist_link"];
+"drive5_link" [label="drive5_link"];
+"drive6_link" [label="drive6_link"];
+"endpoint_link" [label="endpoint_link"];
+"camera_link" [label="camera_link"];
+"pincer_link" [label="pincer_link"];
+"pincer_link2" [label="pincer_link2"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "fixed" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"fixed" -> "base_link"
+"base_link" -> "pedestal_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"pedestal_joint" -> "pedestal_link"
+"pedestal_link" -> "drive1_joint" [label="xyz: 0 0 0.08335 \nrpy: 0 0 -1.5708"]
+"drive1_joint" -> "drive1_link"
+"drive1_link" -> "drive2_joint" [label="xyz: 0.07155 0 0 \nrpy: 0 -1.5708 0"]
+"drive2_joint" -> "drive2_link"
+"drive2_link" -> "humerus_joint" [label="xyz: 0.17855 0 0 \nrpy: 0 -0 0"]
+"humerus_joint" -> "humerus_link"
+"humerus_link" -> "elbow_joint" [label="xyz: 0.17855 0 0 \nrpy: 0 -0 0"]
+"elbow_joint" -> "elbow_link"
+"elbow_link" -> "drive3_joint" [label="xyz: 0 0 0.07155 \nrpy: 0 -0 0"]
+"drive3_joint" -> "drive3_link"
+"drive3_link" -> "drive4_joint" [label="xyz: 0 0.142 0 \nrpy: -1.5708 0 0"]
+"drive4_joint" -> "drive4_link"
+"drive4_link" -> "wrist_joint" [label="xyz: 0 0 0.12955 \nrpy: 0 -1.5708 4.71239"]
+"wrist_joint" -> "wrist_link"
+"wrist_link" -> "drive5_joint" [label="xyz: 0 0 -0.07155 \nrpy: -3.14159 -0 0"]
+"drive5_joint" -> "drive5_link"
+"drive5_link" -> "drive6_joint" [label="xyz: 0.0885 0 0 \nrpy: 0 1.5708 -0"]
+"drive6_joint" -> "drive6_link"
+"drive6_link" -> "endpoint_joint" [label="xyz: 0 0 0.17 \nrpy: 0 -1.5708 1.5708"]
+"endpoint_joint" -> "endpoint_link"
+"endpoint_link" -> "camera_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"camera_joint" -> "camera_link"
+"drive6_link" -> "pincer_joint" [label="xyz: 0.0135 0 0.0375 \nrpy: 0 -1.5708 -1.5708"]
+"pincer_joint" -> "pincer_link"
+"drive6_link" -> "pincer_joint2" [label="xyz: -0.0135 0 0.0375 \nrpy: 0 -1.5708 1.5708"]
+"pincer_joint2" -> "pincer_link2"
+}
