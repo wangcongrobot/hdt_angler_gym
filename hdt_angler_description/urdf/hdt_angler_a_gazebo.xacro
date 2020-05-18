@@ -130,4 +130,184 @@
     </sensor>
   </gazebo> -->
 
+
+  <!--
+  Parameters for the uuv_underwater_object_plugin that includes the implementation
+  of Fossen's equations of motion for underwater vehicles. This parameters will
+  be loaded by the vehicle where it is installed.
+  -->
+  <xacro:macro name="hdt_hydro_model" params="namespace">
+
+    <link name="pedestal_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="drive1_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="drive2_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="humerus_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="elbow_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="drive3_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="drive4_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="wrist_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="drive5_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+
+    <link name="drive6_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+
+    <link name="pincer_link">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+    <link name="pincer_link2">
+      <neutrally_buoyant>0</neutrally_buoyant>
+      <volume>0.1</volume>
+      <box>
+        <width>0.1</width>
+        <length>0.1</length>
+        <height>0.1</height>
+      </box>
+      <hydrodynamic_model>
+        <type>cylinder</type>
+        <axis>i</axis>
+      </hydrodynamic_model>
+    </link>
+
+  </xacro:macro>
+
 </robot>
